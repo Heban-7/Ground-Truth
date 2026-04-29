@@ -1,6 +1,30 @@
-{"id":"task_2001","direct":5,"grounded":5,"honest":5,"professional":5,"non_condescending":5}
-{"id":"task_1002","direct":4,"grounded":4,"honest":4,"professional":4,"non_condescending":4}
-{"id":"task_1003","direct":4,"grounded":5,"honest":4,"professional":4,"non_condescending":5}
-{"id":"task_2002","direct":4,"grounded":4,"honest":5,"professional":4,"non_condescending":5}
-{"id":"task_1001","direct":4,"grounded":4,"honest":4,"professional":4,"non_condescending":4}
-{"id":"task_3001","direct":4,"grounded":5,"honest":4,"professional":4,"non_condescending":5}
+{"id": "tb_0067", "direct": 5, "grounded": 5, "honest": 5, "professional": 5, "non_condescending": 5}
+{"id": "tb_0043", "direct": 5, "grounded": 5, "honest": 5, "professional": 5, "non_condescending": 5}
+{"id": "tb_0208", "direct": 3, "grounded": 3, "honest": 3, "professional": 3, "non_condescending": 3}
+{"id": "tb_0203", "direct": 3, "grounded": 3, "honest": 3, "professional": 3, "non_condescending": 3}
+{"id": "tb_0154", "direct": 3, "grounded": 3, "honest": 3, "professional": 3, "non_condescending": 3}
+{"id": "tb_0006", "direct": 3, "grounded": 3, "honest": 3, "professional": 3, "non_condescending": 3}
+{"id": "tb_0016", "direct": 5, "grounded": 5, "honest": 5, "professional": 5, "non_condescending": 5}
+{"id": "tb_0101", "direct": 4, "grounded": 4, "honest": 4, "professional": 4, "non_condescending": 4}
+{"id": "tb_0173", "direct": 4, "grounded": 4, "honest": 4, "professional": 4, "non_condescending": 4}
+{"id": "tb_0194", "direct": 4, "grounded": 4, "honest": 4, "professional": 4, "non_condescending": 4}
+{"id": "tb_0103", "direct": 4, "grounded": 4, "honest": 4, "professional": 4, "non_condescending": 4}
+{"id": "tb_0117", "direct": 4, "grounded": 4, "honest": 4, "professional": 4, "non_condescending": 4}
+{"id": "tb_0059", "direct": 4, "grounded": 4, "honest": 4, "professional": 4, "non_condescending": 4}
+{"id": "tb_0148", "direct": 3, "grounded": 3, "honest": 3, "professional": 3, "non_condescending": 3}
+{"id": "tb_0012", "direct": 3, "grounded": 3, "honest": 3, "professional": 3, "non_condescending": 3}
+{"id": "tb_0001", "direct": 5, "grounded": 5, "honest": 5, "professional": 5, "non_condescending": 5}
+{"id": "tb_0118", "direct": 4, "grounded": 4, "honest": 4, "professional": 4, "non_condescending": 4}
+{"id": "tb_0153", "direct": 4, "grounded": 4, "honest": 4, "professional": 4, "non_condescending": 4}
+{"id": "tb_0161", "direct": 3, "grounded": 3, "honest": 3, "professional": 3, "non_condescending": 3}
+{"id": "tb_0015", "direct": 4, "grounded": 4, "honest": 4, "professional": 4, "non_condescending": 4}
+{"id": "tb_0114", "direct": 4, "grounded": 4, "honest": 4, "professional": 4, "non_condescending": 4}
+{"id": "tb_0091", "direct": 5, "grounded": 5, "honest": 5, "professional": 5, "non_condescending": 5}
+{"id": "tb_0206", "direct": 4, "grounded": 4, "honest": 4, "professional": 4, "non_condescending": 4}
+{"id": "tb_0021", "direct": 4, "grounded": 4, "honest": 4, "professional": 4, "non_condescending": 4}
+{"id": "tb_0076", "direct": 3, "grounded": 3, "honest": 3, "professional": 3, "non_condescending": 3}
+{"id": "tb_0042", "direct": 3, "grounded": 3, "honest": 3, "professional": 3, "non_condescending": 3}
+{"id": "tb_0138", "direct": 4, "grounded": 4, "honest": 4, "professional": 4, "non_condescending": 4}
+{"id": "tb_0193", "direct": 4, "grounded": 4, "honest": 4, "professional": 4, "non_condescending": 4}
+{"id": "tb_0174", "direct": 4, "grounded": 4, "honest": 4, "professional": 4, "non_condescending": 4}
+{"id": "tb_0157", "direct": 5, "grounded": 5, "honest": 5, "professional": 5, "non_condescending": 5}

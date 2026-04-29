@@ -80,7 +80,7 @@ def write_markdown(report: dict) -> None:
     lines = []
     lines.append("# Inter-rater agreement (pilot)\n")
     lines.append(
-        "This is a pilot run on the current seed dataset. Target production protocol is 30-task relabeling after 24 hours.\n"
+        "This is a pilot run on a 30-task benchmark subset. Production protocol keeps the same structure with a strict 24-hour relabel gap.\n"
     )
     lines.append(f"- Shared tasks: {report['shared_task_count']}")
     lines.append(f"- Threshold per dimension: {report['pass_threshold_percent']}%")

@@ -1,0 +1,7 @@
+{
+  "hard_seed_author_model": "openrouter:gpt-5-class",
+  "bulk_variation_model": "openrouter:qwen3-next-80b-a3b",
+  "dev_judge_model": "openrouter:deepseek-v3.2",
+  "calibration_model": "openrouter:claude-sonnet-4.6",
+  "policy": "No model family self-judges its own generated item."
+}

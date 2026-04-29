@@ -1,0 +1,17 @@
+{
+  "seed": 42,
+  "raw_pool_count": 210,
+  "deduped_count": 209,
+  "filtered_count": 209,
+  "partition_counts": {
+    "train": 104,
+    "dev": 63,
+    "held_out": 42
+  },
+  "source_counts": {
+    "trace_derived": 63,
+    "programmatic": 62,
+    "multi_llm_synthesis": 52,
+    "hand_authored": 32
+  }
+}

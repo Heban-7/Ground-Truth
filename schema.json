@@ -29,7 +29,8 @@
         "string"
       ],
       "max_body_words": "number",
-      "single_ask_required": "boolean"
+      "single_ask_required": "boolean",
+      "time_anchor_required": "boolean"
     },
     "rubric": {
       "direct": "1-5",
@@ -38,6 +39,11 @@
       "professional": "1-5",
       "non_condescending": "1-5",
       "pass_threshold_per_dimension": 4
+    },
+    "metadata": {
+      "route_model": "string",
+      "judge_model": "string",
+      "generation_note": "string"
     }
   },
   "example_tasks": [
@@ -73,7 +79,8 @@
           "just following up"
         ],
         "max_body_words": 120,
-        "single_ask_required": true
+        "single_ask_required": true,
+        "time_anchor_required": true
       },
       "rubric": {
         "direct": 5,
@@ -82,6 +89,109 @@
         "professional": 5,
         "non_condescending": 5,
         "pass_threshold_per_dimension": 4
+      },
+      "metadata": {
+        "route_model": "openrouter:qwen3-next-80b-a3b",
+        "judge_model": "openrouter:deepseek-v3.2",
+        "generation_note": "Programmatic template with high-confidence funding signal."
+      }
+    },
+    {
+      "id": "task_0002",
+      "source_mode": "trace_derived",
+      "partition": "train",
+      "difficulty": "medium",
+      "input": {
+        "prospect_name": "Daniel",
+        "company_name": "Northbeam Systems",
+        "channel": "email",
+        "signal_brief": "12% contraction announced in March 2026 with continued data hiring.",
+        "signal_confidence": "high",
+        "ai_maturity_score": "2",
+        "bench_summary_ref": "bench_summary.json",
+        "pricing_ref": "pricing_sheet.md"
+      },
+      "candidate_output": {
+        "subject": "Context: cost-aware data capacity after restructure",
+        "body": "Hi Daniel, I saw the 12% contraction announced in March 2026 and continued data hiring. If delivery demand remains active, we can provide managed data engineering capacity with one-month terms. Would a short scoping call this week be useful? Best, Yabi"
+      },
+      "ground_truth": {
+        "required_elements": [
+          "at_least_one_specific_signal",
+          "one_clear_ask",
+          "no_external_bench_term"
+        ],
+        "forbidden_phrases": [
+          "world-class",
+          "top talent",
+          "quick chat",
+          "just following up"
+        ],
+        "max_body_words": 120,
+        "single_ask_required": true,
+        "time_anchor_required": true
+      },
+      "rubric": {
+        "direct": 4,
+        "grounded": 5,
+        "honest": 4,
+        "professional": 5,
+        "non_condescending": 4,
+        "pass_threshold_per_dimension": 4
+      },
+      "metadata": {
+        "route_model": "openrouter:gpt-5-class",
+        "judge_model": "openrouter:deepseek-v3.2",
+        "generation_note": "Trace-derived rewrite from restructure context."
+      }
+    },
+    {
+      "id": "task_0003",
+      "source_mode": "hand_authored",
+      "partition": "held_out",
+      "difficulty": "hard",
+      "input": {
+        "prospect_name": "Priya",
+        "company_name": "Helix Cloud",
+        "channel": "email",
+        "signal_brief": "New CTO announced in April 2026; vendor reassessment expected in first 90 days.",
+        "signal_confidence": "high",
+        "ai_maturity_score": "2",
+        "bench_summary_ref": "bench_summary.json",
+        "pricing_ref": "pricing_sheet.md"
+      },
+      "candidate_output": {
+        "subject": "Resource: vendor-model brief for your first 90 days",
+        "body": "Hi Priya, I saw the new CTO announcement in April 2026. Teams often reassess vendor mix during the first 90 days, so I prepared a one-page brief on trade-offs and where each model fails. Want me to send it? Best, Yabi"
+      },
+      "ground_truth": {
+        "required_elements": [
+          "at_least_one_specific_signal",
+          "one_clear_ask",
+          "no_external_bench_term"
+        ],
+        "forbidden_phrases": [
+          "world-class",
+          "top talent",
+          "quick chat",
+          "just following up"
+        ],
+        "max_body_words": 120,
+        "single_ask_required": true,
+        "time_anchor_required": true
+      },
+      "rubric": {
+        "direct": 4,
+        "grounded": 5,
+        "honest": 5,
+        "professional": 5,
+        "non_condescending": 5,
+        "pass_threshold_per_dimension": 4
+      },
+      "metadata": {
+        "route_model": "manual",
+        "judge_model": "openrouter:claude-sonnet-4.6",
+        "generation_note": "Hand-authored adversarial-safe variant."
       }
     }
   ]

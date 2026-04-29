@@ -6,36 +6,32 @@ Dataset partitions for the Tenacious sales evaluation benchmark.
 - `dev/`: public development partition (target 30%)
 - `held_out/`: sealed evaluation partition (target 20%)
 
-The folders are initialized empty and will be populated in later steps.
+Current interim build (seed 42):
 
-Current seed status:
+- total accepted tasks: 209
+- `train/tasks.jsonl`: 104 tasks
+- `dev/tasks.jsonl`: 63 tasks
+- `held_out/tasks.jsonl`: 42 tasks
 
-- `train/tasks.jsonl`: 3 tasks
-- `dev/tasks.jsonl`: 2 tasks
-- `held_out/tasks.jsonl`: 1 task
+Generate and validate:
 
-To regenerate these starter files, run:
+1. `python generation_scripts/author_benchmark.py`
+2. `python generation_scripts/contamination_check.py`
+3. `python generation_scripts/bootstrap_label_rounds.py`
+4. `python generation_scripts/inter_rater_agreement.py`
+5. `python scoring_evaluator.py --mode rules`
+6. `python scoring_evaluator.py --mode hybrid`
 
-`python generation_scripts/build_seed_dataset.py`
+Artifacts at repo root:
 
-To run contamination checks (train vs held_out), run:
+- `contamination_check.json`
+- `inter_rater_agreement.json`
+- `inter_rater_agreement.md`
 
-`python generation_scripts/contamination_check.py`
+Generation logs:
 
-This writes `contamination_check.json` at the repository root.
-
-To repartition current tasks with deterministic shuffle (default 50/30/20), run:
-
-`python generation_scripts/partition_tasks.py --seed 42`
-
-To compute pilot inter-rater agreement (two labeling rounds), run:
-
-`python generation_scripts/inter_rater_agreement.py`
-
-This writes `inter_rater_agreement.json` and `inter_rater_agreement.md` at the repository root.
-
-To compute pilot inter-rater agreement (two labeling rounds), run:
-
-`python generation_scripts/inter_rater_agreement.py`
-
-This writes `inter_rater_agreement.json` and `inter_rater_agreement.md` at the repository root.
+- `generation_scripts/logs/raw_pool.jsonl`
+- `generation_scripts/logs/deduped_pool.jsonl`
+- `generation_scripts/logs/judge_filter_log.jsonl`
+- `generation_scripts/logs/model_routes.json`
+- `generation_scripts/logs/seed_counts.json`

@@ -23,11 +23,17 @@ Because Week 10 outputs are missing, we replace each expected input with a contr
 
 This keeps the workflow valid while preserving evaluation rigor.
 
-## Path decision (temporary)
+## Path declaration (interim)
 
-Temporary default path: **Path B (judge/critic)**, because it is robust when generation traces are limited and aligns with style-compliance scoring.
+Declared path: **Path B (judge/critic)**.
 
-Final path declaration will be confirmed after we build and inspect the first 20 benchmark tasks.
+Rationale:
+
+- Failure concentration is reliability-oriented (detection + rejection), not pure fluency generation.
+- Proxy trace failures `TRC-007` (capacity over-commitment), `TRC-011` (condescending framing), and `TRC-015` (aggressive follow-up) are better addressed by a critic gate.
+- Probe failures `PRB-02`, `PRB-03`, `PRB-06` indicate policy violations where a judge layer provides faster risk reduction than full generator retraining.
+- Judge interface and calibration choices follow guidance from *A Survey on LLM-as-a-Judge* (Gu et al.).
+- Model-family rotation policy follows leakage constraints from *Preference Leakage* (Li et al., 2025).
 
 ## Cost guardrails
 
@@ -39,13 +45,14 @@ Final path declaration will be confirmed after we build and inspect the first 20
 
 Run commands in this order:
 
-1. `python generation_scripts/build_seed_dataset.py`
-2. `python generation_scripts/partition_tasks.py --seed 42`
+1. `python generation_scripts/author_benchmark.py`
+2. `python generation_scripts/bootstrap_label_rounds.py`
 3. `python generation_scripts/contamination_check.py`
-4. `python scoring_evaluator.py`
-5. `python generation_scripts/inter_rater_agreement.py`
+4. `python scoring_evaluator.py --mode rules`
+5. `python scoring_evaluator.py --mode hybrid`
+6. `python generation_scripts/inter_rater_agreement.py`
 
-Artifacts produced:
+Interim artifacts produced:
 
 - `tenacious_bench_v0.1/train/tasks.jsonl`
 - `tenacious_bench_v0.1/dev/tasks.jsonl`
@@ -53,9 +60,36 @@ Artifacts produced:
 - `contamination_check.json`
 - `inter_rater_agreement.json`
 - `inter_rater_agreement.md`
+- `generation_scripts/logs/model_routes.json`
+- `generation_scripts/logs/seed_counts.json`
+- `generation_scripts/logs/judge_filter_log.jsonl`
 
 ## Inter-rater policy
 
 - Pilot stage: two rounds over current seed tasks to validate workflow.
 - Production target: 30-task subset, relabeled after ~24 hours without looking at round 1 labels.
 - Decision rule: if any dimension agreement is below 80%, revise rubric guidance and relabel.
+
+## Partitioning protocol
+
+- Target split: 50% train, 30% dev, 20% held_out.
+- Assignment is deterministic from seed `42` in authoring pipeline.
+- Held-out is evaluated only; no training scripts should read it.
+
+## Contamination protocol (interim)
+
+Checks run before accepting held_out:
+
+- 8-gram overlap check between train and held_out signal briefs
+- lexical similarity proxy threshold (< 0.85)
+- explicit time-anchor requirement in held_out signal briefs
+
+Current result: pass on overlap + similarity; time-anchor warnings resolved.
+
+## Week 10 artifact gap handling
+
+This repository does not contain Week 10 files. To keep momentum and preserve evidence integrity:
+
+- `trace_log.jsonl` replaced by structured proxy traces (`TRC-*`) documented in `audit_memo.md`
+- `probe_library.md` replaced by explicit probe IDs (`PRB-*`) from style-guide failure patterns
+- all claims in interim report are tagged as proxy-derived where applicable

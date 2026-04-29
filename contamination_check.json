@@ -5,8 +5,8 @@
     "time_shift_rule": "Each held_out signal_brief should include an explicit time anchor."
   },
   "counts": {
-    "train_tasks": 3,
-    "held_out_tasks": 1,
+    "train_tasks": 104,
+    "held_out_tasks": 42,
     "ngram_violations": 0,
     "similarity_violations": 0,
     "time_anchor_warnings": 0
