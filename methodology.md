@@ -34,4 +34,3 @@ Final path declaration will be confirmed after we build and inspect the first 20
 - No tau-squared reruns.
 - Use cheap-tier models for authoring/filters.
 - Reserve eval-tier calls for held-out scoring only.
-
