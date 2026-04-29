@@ -34,3 +34,28 @@ Final path declaration will be confirmed after we build and inspect the first 20
 - No tau-squared reruns.
 - Use cheap-tier models for authoring/filters.
 - Reserve eval-tier calls for held-out scoring only.
+
+## Reproducible protocol (current implementation)
+
+Run commands in this order:
+
+1. `python generation_scripts/build_seed_dataset.py`
+2. `python generation_scripts/partition_tasks.py --seed 42`
+3. `python generation_scripts/contamination_check.py`
+4. `python scoring_evaluator.py`
+5. `python generation_scripts/inter_rater_agreement.py`
+
+Artifacts produced:
+
+- `tenacious_bench_v0.1/train/tasks.jsonl`
+- `tenacious_bench_v0.1/dev/tasks.jsonl`
+- `tenacious_bench_v0.1/held_out/tasks.jsonl`
+- `contamination_check.json`
+- `inter_rater_agreement.json`
+- `inter_rater_agreement.md`
+
+## Inter-rater policy
+
+- Pilot stage: two rounds over current seed tasks to validate workflow.
+- Production target: 30-task subset, relabeled after ~24 hours without looking at round 1 labels.
+- Decision rule: if any dimension agreement is below 80%, revise rubric guidance and relabel.

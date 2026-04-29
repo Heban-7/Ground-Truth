@@ -17,3 +17,25 @@ Current seed status:
 To regenerate these starter files, run:
 
 `python generation_scripts/build_seed_dataset.py`
+
+To run contamination checks (train vs held_out), run:
+
+`python generation_scripts/contamination_check.py`
+
+This writes `contamination_check.json` at the repository root.
+
+To repartition current tasks with deterministic shuffle (default 50/30/20), run:
+
+`python generation_scripts/partition_tasks.py --seed 42`
+
+To compute pilot inter-rater agreement (two labeling rounds), run:
+
+`python generation_scripts/inter_rater_agreement.py`
+
+This writes `inter_rater_agreement.json` and `inter_rater_agreement.md` at the repository root.
+
+To compute pilot inter-rater agreement (two labeling rounds), run:
+
+`python generation_scripts/inter_rater_agreement.py`
+
+This writes `inter_rater_agreement.json` and `inter_rater_agreement.md` at the repository root.

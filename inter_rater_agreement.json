@@ -1,0 +1,47 @@
+{
+  "shared_task_count": 6,
+  "task_ids": [
+    "task_1001",
+    "task_1002",
+    "task_1003",
+    "task_2001",
+    "task_2002",
+    "task_3001"
+  ],
+  "pass_threshold_percent": 80.0,
+  "per_dimension": {
+    "direct": {
+      "matches": 6,
+      "total": 6,
+      "agreement_percent": 100.0,
+      "passes_threshold": true
+    },
+    "grounded": {
+      "matches": 5,
+      "total": 6,
+      "agreement_percent": 83.33,
+      "passes_threshold": true
+    },
+    "honest": {
+      "matches": 5,
+      "total": 6,
+      "agreement_percent": 83.33,
+      "passes_threshold": true
+    },
+    "professional": {
+      "matches": 6,
+      "total": 6,
+      "agreement_percent": 100.0,
+      "passes_threshold": true
+    },
+    "non_condescending": {
+      "matches": 5,
+      "total": 6,
+      "agreement_percent": 83.33,
+      "passes_threshold": true
+    }
+  },
+  "overall_percent": 90.0,
+  "overall_pass": true,
+  "failing_dimensions": []
+}

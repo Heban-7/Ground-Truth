@@ -1,0 +1,24 @@
+{
+  "policy": {
+    "n_gram_rule": "No shared 8-gram between train and held_out signal_brief.",
+    "similarity_rule": "Lexical similarity < 0.85 (proxy for embedding check).",
+    "time_shift_rule": "Each held_out signal_brief should include an explicit time anchor."
+  },
+  "counts": {
+    "train_tasks": 3,
+    "held_out_tasks": 1,
+    "ngram_violations": 0,
+    "similarity_violations": 0,
+    "time_anchor_warnings": 0
+  },
+  "violations": {
+    "ngram": [],
+    "similarity": [],
+    "time_anchor_warnings": []
+  },
+  "pass": true,
+  "notes": [
+    "Similarity uses lexical Jaccard proxy for now.",
+    "Replace lexical proxy with real embedding model in a later step."
+  ]
+}

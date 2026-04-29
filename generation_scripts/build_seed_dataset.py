@@ -149,7 +149,7 @@ def main() -> None:
             partition="held_out",
             source_mode="hand_authored",
             difficulty="hard",
-            signal_brief="AI maturity score 2 with three named peers hiring MLOps in last 90 days.",
+            signal_brief="In March 2026, AI maturity score 2 with three named peers hiring MLOps in last 90 days.",
             subject="Question: your MLOps roadmap for 2026",
             body=(
                 "Hi, three named peers posted senior MLOps roles in the last 90 days while your team "
