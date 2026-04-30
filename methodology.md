@@ -79,6 +79,18 @@ Phase IV artifacts:
 - `training/path_b/artifacts/metrics.json`
 - `training/path_b/artifacts/training_run.log`
 
+Phase V artifacts:
+
+- `ablations/ablation_results.json`
+- `ablations/held_out_traces.jsonl`
+
+Phase VI artifacts:
+
+- `evidence_graph.json`
+- `memo.md`
+- `demo_video_checklist.md`
+- `final_submission_checklist.md`
+
 ## Inter-rater policy
 
 - Pilot stage: two rounds over current seed tasks to validate workflow.

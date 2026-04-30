@@ -81,3 +81,24 @@ Artifacts:
 - `training/path_b/artifacts/critic_model.json`
 - `training/path_b/artifacts/metrics.json`
 - `training/path_b/artifacts/training_run.log`
+
+## Phase V (implemented)
+
+Evaluation and ablations are implemented:
+
+1. `python ablations/run_ablations.py`
+
+Artifacts:
+
+- `ablations/ablation_results.json`
+- `ablations/held_out_traces.jsonl`
+- `ablations/README.md`
+
+## Phase VI (implemented)
+
+Final submission packaging artifacts are now in place:
+
+- `evidence_graph.json`
+- `memo.md`
+- `demo_video_checklist.md`
+- `final_submission_checklist.md`

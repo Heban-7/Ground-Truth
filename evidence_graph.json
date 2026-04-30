@@ -1,0 +1,155 @@
+{
+  "version": "v0.1",
+  "generated_for": "Week 11 final submission packaging",
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Final benchmark contains 209 accepted tasks after dedup/filter.",
+      "value": 209,
+      "unit": "tasks",
+      "sources": [
+        {
+          "file": "generation_scripts/logs/seed_counts.json",
+          "field": "filtered_count"
+        }
+      ]
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Partition sizes are train=104, dev=63, held_out=42.",
+      "value": {
+        "train": 104,
+        "dev": 63,
+        "held_out": 42
+      },
+      "sources": [
+        {
+          "file": "generation_scripts/logs/seed_counts.json",
+          "field": "partition_counts"
+        }
+      ]
+    },
+    {
+      "claim_id": "C003",
+      "claim_text": "Inter-rater overall agreement is 82.67% on 30 tasks.",
+      "value": 82.67,
+      "unit": "percent",
+      "sources": [
+        {
+          "file": "inter_rater_agreement.json",
+          "field": "overall_percent"
+        },
+        {
+          "file": "inter_rater_agreement.json",
+          "field": "shared_task_count"
+        }
+      ]
+    },
+    {
+      "claim_id": "C004",
+      "claim_text": "Contamination checks passed with zero overlap/similarity violations for held_out.",
+      "value": {
+        "ngram_violations": 0,
+        "similarity_violations": 0,
+        "time_anchor_warnings": 0
+      },
+      "sources": [
+        {
+          "file": "contamination_check.json",
+          "field": "counts"
+        },
+        {
+          "file": "contamination_check.json",
+          "field": "pass"
+        }
+      ]
+    },
+    {
+      "claim_id": "C005",
+      "claim_text": "Path B training data contains 1040 preference pairs.",
+      "value": 1040,
+      "unit": "pairs",
+      "sources": [
+        {
+          "file": "training_data/path_b/summary.json",
+          "field": "total_pairs"
+        }
+      ]
+    },
+    {
+      "claim_id": "C006",
+      "claim_text": "Training-data contamination check passed against dev+held_out.",
+      "value": {
+        "source_id_overlap": 0,
+        "ngram_violations": 0,
+        "similarity_violations": 0
+      },
+      "sources": [
+        {
+          "file": "training_data_contamination_check.json",
+          "field": "counts"
+        },
+        {
+          "file": "training_data_contamination_check.json",
+          "field": "pass"
+        }
+      ]
+    },
+    {
+      "claim_id": "C007",
+      "claim_text": "Phase IV critic baseline reached 100% train and 100% val preference accuracy.",
+      "value": {
+        "train_accuracy": 100.0,
+        "val_accuracy": 100.0
+      },
+      "unit": "percent",
+      "sources": [
+        {
+          "file": "training/path_b/artifacts/metrics.json",
+          "field": "final_train.accuracy"
+        },
+        {
+          "file": "training/path_b/artifacts/metrics.json",
+          "field": "final_val.accuracy"
+        }
+      ]
+    },
+    {
+      "claim_id": "C008",
+      "claim_text": "Delta A (trained critic vs baseline rules) is 0.00 pp on current held-out protocol.",
+      "value": 0.0,
+      "unit": "percentage_points",
+      "sources": [
+        {
+          "file": "ablations/ablation_results.json",
+          "field": "deltas.delta_a_trained_vs_baseline.delta_percent_points"
+        }
+      ]
+    },
+    {
+      "claim_id": "C009",
+      "claim_text": "Delta B (trained critic vs prompt-engineered rules) is +20.24 pp with p=0.004.",
+      "value": {
+        "delta_percent_points": 20.24,
+        "p_value": 0.004
+      },
+      "sources": [
+        {
+          "file": "ablations/ablation_results.json",
+          "field": "deltas.delta_b_trained_vs_prompt_engineered"
+        }
+      ]
+    },
+    {
+      "claim_id": "C010",
+      "claim_text": "Held-out evaluation traces are preserved for reproducibility.",
+      "value": "present",
+      "sources": [
+        {
+          "file": "ablations/held_out_traces.jsonl",
+          "field": "line_records"
+        }
+      ]
+    }
+  ]
+}

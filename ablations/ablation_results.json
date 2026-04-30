@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "seed": 42,
+    "bootstrap_samples": 4000,
+    "held_out_tasks": 42,
+    "evaluated_examples": 84,
+    "protocol": "Each held-out task expanded into positive+negative example."
+  },
+  "systems": {
+    "baseline_rules": {
+      "accuracy_percent": 69.05
+    },
+    "prompt_engineered_rules": {
+      "accuracy_percent": 48.81
+    },
+    "trained_critic": {
+      "accuracy_percent": 69.05
+    }
+  },
+  "deltas": {
+    "delta_a_trained_vs_baseline": {
+      "delta_percent_points": 0.0,
+      "ci95_low": -13.1,
+      "ci95_high": 13.1,
+      "p_value": 0.5225
+    },
+    "delta_b_trained_vs_prompt_engineered": {
+      "delta_percent_points": 20.24,
+      "ci95_low": 5.95,
+      "ci95_high": 34.52,
+      "p_value": 0.004
+    }
+  },
+  "cost_latency_pareto": {
+    "baseline_rules": {
+      "cost_usd_per_example": 0.0,
+      "latency_ms_per_example": 4
+    },
+    "prompt_engineered_rules": {
+      "cost_usd_per_example": 0.0,
+      "latency_ms_per_example": 7
+    },
+    "trained_critic": {
+      "cost_usd_per_example": 5e-05,
+      "latency_ms_per_example": 12
+    }
+  },
+  "notes": [
+    "Delta C against tau-squared retail is not included (Week 10 score unavailable).",
+    "Current critic is a deterministic baseline proxy for pipeline validation."
+  ]
+}
