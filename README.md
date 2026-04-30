@@ -54,3 +54,18 @@ Dummy-task evaluator check (Act I requirement):
 - connect hybrid judge scaffold to real OpenRouter calls
 - prepare training_data for Path B preference/judge tuning
 - run held-out ablations and package interim PDF/report visuals
+
+## Phase III (implemented)
+
+Path B training-data preparation is now implemented:
+
+1. `python generation_scripts/prepare_path_b_training_data.py`
+2. `python generation_scripts/check_training_data_contamination.py`
+
+Artifacts:
+
+- `training_data/path_b/preference_pairs_train.jsonl`
+- `training_data/path_b/preference_pairs_val.jsonl`
+- `training_data/path_b/summary.json`
+- `training_data_contamination_check.json`
+- `methodology_rationale.md`

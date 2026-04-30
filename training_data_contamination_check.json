@@ -1,0 +1,27 @@
+{
+  "policy": {
+    "id_overlap_rule": "No training-data source_task_id can be in dev/held_out IDs",
+    "ngram_rule": "No shared 8-gram between training prompt and dev/held signal brief",
+    "similarity_rule": "Jaccard(prompt, eval_signal) < 0.85"
+  },
+  "counts": {
+    "train_pairs": 936,
+    "val_pairs": 104,
+    "total_pairs": 1040,
+    "eval_tasks_checked": 105,
+    "source_id_overlap": 0,
+    "ngram_violations": 0,
+    "similarity_violations": 0
+  },
+  "violations": {
+    "source_id_overlap": [],
+    "ngram": [],
+    "similarity": []
+  },
+  "pass": true,
+  "notes": [
+    "This check compares training-data prompts against both dev and held_out.",
+    "Similarity uses lexical Jaccard proxy; replace with embeddings in later phase.",
+    "Eval task index keys: ['tb_0001', 'tb_0004', 'tb_0005', 'tb_0007', 'tb_0008'] ..."
+  ]
+}

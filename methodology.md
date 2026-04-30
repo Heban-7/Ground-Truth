@@ -64,6 +64,14 @@ Interim artifacts produced:
 - `generation_scripts/logs/seed_counts.json`
 - `generation_scripts/logs/judge_filter_log.jsonl`
 
+Phase III artifacts:
+
+- `training_data/path_b/preference_pairs_train.jsonl`
+- `training_data/path_b/preference_pairs_val.jsonl`
+- `training_data/path_b/summary.json`
+- `training_data_contamination_check.json`
+- `methodology_rationale.md`
+
 ## Inter-rater policy
 
 - Pilot stage: two rounds over current seed tasks to validate workflow.

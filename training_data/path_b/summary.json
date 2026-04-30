@@ -1,0 +1,8 @@
+{
+  "seed": 42,
+  "source_train_tasks": 104,
+  "negatives_per_task": 10,
+  "total_pairs": 1040,
+  "train_pairs": 936,
+  "val_pairs": 104
+}
