@@ -69,3 +69,15 @@ Artifacts:
 - `training_data/path_b/summary.json`
 - `training_data_contamination_check.json`
 - `methodology_rationale.md`
+
+## Phase IV (implemented)
+
+Path B baseline training execution is now implemented:
+
+1. `python training/path_b/train_critic.py`
+
+Artifacts:
+
+- `training/path_b/artifacts/critic_model.json`
+- `training/path_b/artifacts/metrics.json`
+- `training/path_b/artifacts/training_run.log`

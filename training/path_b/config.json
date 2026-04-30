@@ -1,0 +1,10 @@
+{
+  "seed": 42,
+  "epochs": 6,
+  "learning_rate": 1.0,
+  "min_token_length": 3,
+  "max_vocab_size": 12000,
+  "train_pairs_path": "training_data/path_b/preference_pairs_train.jsonl",
+  "val_pairs_path": "training_data/path_b/preference_pairs_val.jsonl",
+  "artifacts_dir": "training/path_b/artifacts"
+}

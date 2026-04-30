@@ -72,6 +72,13 @@ Phase III artifacts:
 - `training_data_contamination_check.json`
 - `methodology_rationale.md`
 
+Phase IV artifacts:
+
+- `training/path_b/config.json`
+- `training/path_b/artifacts/critic_model.json`
+- `training/path_b/artifacts/metrics.json`
+- `training/path_b/artifacts/training_run.log`
+
 ## Inter-rater policy
 
 - Pilot stage: two rounds over current seed tasks to validate workflow.
