@@ -26,6 +26,7 @@
 - [ ] HuggingFace model/judge URL (if publishing): `TODO`
 - [ ] Blog post URL: `TODO`
 - [ ] Community engagement URL (issue/submission/PR): `TODO`
+- [ ] Publication manifest URLs updated: `publication/publication_manifest.json`
 
 ## Demo package
 

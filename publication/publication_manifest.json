@@ -1,0 +1,43 @@
+{
+  "generated_at_utc": "2026-04-30T19:20:52.189112+00:00",
+  "project": {
+    "name": "tenacious_bench_v0.1",
+    "path_declaration": "Path B (judge/critic)"
+  },
+  "metrics_snapshot": {
+    "benchmark_tasks": 209,
+    "partition_counts": {
+      "train": 104,
+      "dev": 63,
+      "held_out": 42
+    },
+    "source_counts": {
+      "trace_derived": 63,
+      "programmatic": 62,
+      "multi_llm_synthesis": 52,
+      "hand_authored": 32
+    },
+    "inter_rater_overall_percent": 82.67,
+    "held_out_contamination_pass": true,
+    "training_data_contamination_pass": true,
+    "delta_a_pp": 0.0,
+    "delta_b_pp": 20.24
+  },
+  "publication_targets": {
+    "huggingface_dataset_url": "TODO",
+    "huggingface_model_or_judge_url": "TODO",
+    "blog_post_url": "TODO",
+    "community_engagement_url": "TODO",
+    "demo_video_url": "TODO"
+  },
+  "artifact_links": {
+    "datasheet": "datasheet.md",
+    "methodology": "methodology.md",
+    "methodology_rationale": "methodology_rationale.md",
+    "evidence_graph": "evidence_graph.json",
+    "ablation_results": "ablations/ablation_results.json",
+    "held_out_traces": "ablations/held_out_traces.jsonl",
+    "cost_log": "cost_log.md",
+    "memo": "memo.md"
+  }
+}

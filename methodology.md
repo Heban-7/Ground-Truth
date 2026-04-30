@@ -91,6 +91,15 @@ Phase VI artifacts:
 - `demo_video_checklist.md`
 - `final_submission_checklist.md`
 
+Phase VII artifacts:
+
+- `generation_scripts/prepare_publication_bundle.py`
+- `publication/publication_manifest.json`
+- `publication/dataset_card.md`
+- `publication/judge_model_card.md`
+- `publication/blog_post_draft.md`
+- `publication/community_post_template.md`
+
 ## Inter-rater policy
 
 - Pilot stage: two rounds over current seed tasks to validate workflow.

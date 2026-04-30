@@ -102,3 +102,14 @@ Final submission packaging artifacts are now in place:
 - `memo.md`
 - `demo_video_checklist.md`
 - `final_submission_checklist.md`
+
+## Phase VII (implemented)
+
+Publication prep automation and templates:
+
+- `generation_scripts/prepare_publication_bundle.py`
+- `publication/publication_manifest.json`
+- `publication/dataset_card.md`
+- `publication/judge_model_card.md`
+- `publication/blog_post_draft.md`
+- `publication/community_post_template.md`
