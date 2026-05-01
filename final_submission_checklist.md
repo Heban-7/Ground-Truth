@@ -19,6 +19,8 @@
 - [x] `ablations/held_out_traces.jsonl`
 - [x] `evidence_graph.json`
 - [x] `memo.md`
+- [x] `ablations/statistical_test_output.json`
+- [x] `final_pdf_ready_report.md`
 
 ## Public artifacts (fill before final)
 
@@ -44,3 +46,8 @@
 
 - Week 10 artifacts unavailable; proxy trace/probe IDs used with explicit disclosure.
 - Delta C (vs tau-squared Week 10 score) not reported because no Week 10 score available in repo.
+
+## Synthesis memo completeness
+
+- [x] 4 common memos completed (`01`-`04`)
+- [x] 3 Path B memos completed (`05`-`07`)

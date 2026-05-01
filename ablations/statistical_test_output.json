@@ -1,0 +1,20 @@
+{
+  "method": "paired_bootstrap",
+  "bootstrap_samples": 4000,
+  "seed": 42,
+  "tests": {
+    "delta_a_trained_vs_baseline": {
+      "delta_percent_points": 0.0,
+      "ci95_low": -13.1,
+      "ci95_high": 13.1,
+      "p_value": 0.5225
+    },
+    "delta_b_trained_vs_prompt_engineered": {
+      "delta_percent_points": 20.24,
+      "ci95_low": 5.95,
+      "ci95_high": 34.52,
+      "p_value": 0.004
+    }
+  },
+  "source": "ablations/ablation_results.json"
+}

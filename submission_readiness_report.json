@@ -1,0 +1,27 @@
+{
+  "ready_for_submission": true,
+  "missing_required_files": [],
+  "todo_occurrences": 19,
+  "todo_breakdown": [
+    {
+      "file": "submission_packet.md",
+      "todo_count": 5
+    },
+    {
+      "file": "final_submission_checklist.md",
+      "todo_count": 5
+    },
+    {
+      "file": "publication/publication_manifest.json",
+      "todo_count": 5
+    },
+    {
+      "file": "final_pdf_ready_report.md",
+      "todo_count": 4
+    }
+  ],
+  "notes": [
+    "Replace TODO URLs before final submission.",
+    "Some TODOs may be intentional if public artifacts are not published yet."
+  ]
+}
